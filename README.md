@@ -1,12 +1,14 @@
-### ENCODER 8TO3 DATAFLOW Modelling
+### ENCODER 8 TO 3 DATAFLOW Modelling
 
 **AIM:**
 
 To implement  Encoder 8 To 3 in Dataflow Modelling using verilog and validating their functionality using their functional tables
 
-**SOFTWARE REQUIRED:** Quartus prime
+**SOFTWARE REQUIRED:**
 
-**THEORY**
+Quartus prime
+
+**THEORY:**
 
 **Encoder 8 To 3**
 
@@ -16,7 +18,7 @@ The 8 to 3 line Encoder is also known as Octal to Binary Encoder. In 8 to 3 line
 
 Figure 01  Block Diagram of Encoder 8 * 3
 
-**Truth Table**
+**TRUTH TABLE:**
 
 ![image](https://github.com/naavaneetha/ENCODER8TO3DATAFLOW/assets/154305477/35496b14-ae6e-4cd1-9abd-d6736b576575)
 
@@ -34,23 +36,38 @@ Logical circuit of the above expressions is given below:
 
 Figure 02  Encoder 8 * 3
 
-**Procedure**
-
-/* write all the steps invloved */
-
-**PROGRAM**
-
-/* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
-
-Developed by: RegisterNumber:
-*/
-
-**RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
-
-**TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
-
-**RESULTS**
+**PROCEDURE:**
+1. Type the program in Quartus software.
+2. Compile and run the program.
+3. Generate the RTL schematic and save the logic diagram.
+4. Create nodes for inputs and outputs to generate the timing diagram.
+5. For different input combinations generate the timing diagram.
 
 
+**PROGRAM:**
+
+    module enc(a,b,c,y0,y1,y2,y3,y4,y5,y6,y7);
+    input y0,y1,y2,y3,y4,y5,y6,y7;
+    output a,b,c;
+    assign a= ( y4 | y5 | y6 | y7);
+    assign b= ( y2 | y3 | y6 | y7);
+    assign c= ( y1 | y3 | y5 | y7);
+    endmodule
 
 
+**RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling:**
+
+![Screenshot 2024-12-27 000047](https://github.com/user-attachments/assets/0c54b5c9-4510-49e7-9e2a-e8f957b7e5ba)
+
+**TIMING DIAGRAMS FOR Encoder 8 To 3 in Dataflow Modelling:**
+
+![image](https://github.com/user-attachments/assets/17a04fc8-4d16-4631-8201-da7103297515)
+
+
+**RESULT:**
+
+Thus Encoder 8 To 3 in Dataflow Modelling using verilog is implemented and their
+functionality using their functional tables is validated.
+
+Developed by: K.DHANUSRI POOJA 
+RegisterNumber: 24011393
